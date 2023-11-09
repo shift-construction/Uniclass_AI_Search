@@ -8,7 +8,10 @@ import pandas as pd
 MAX_RETRIES = 3  # Maximum number of retries for the API call
 BACKOFF_FACTOR = 2  # Factor to determine the backoff period
 
-
+# Replace the following with your actual credentials and endpoint details
+openai_api_key = st.secrets["openai_api_key"]
+pinecone_api_key = st.secrets["pinecone_api_key"]
+pinecone_index_url = st.secrets["pinecone_index_url"]
 
 # Function to get the embedding from OpenAI
 def get_openai_embedding(text):
