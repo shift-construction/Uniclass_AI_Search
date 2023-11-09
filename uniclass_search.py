@@ -72,6 +72,9 @@ def main():
     with st.form(key='search_form'):
         search_query = st.text_input("Enter a search term", key="search_box")
         submit_button = st.form_submit_button(label='Search')
+    
+        # Additional text with hyperlink
+        st.markdown("This is the prototype Uniclass search engine as outlined in [this article](https://medium.com/shift-construction/creating-an-ai-powered-uniclass-classification-engine-part-1-search-engine-a7ec50c756ab). Follow Shift Construction on [Medium](https://medium.com/@shiftconstruction) or [LinkedIn](https://www.linkedin.com/company/shift-construction) to see how the search engine evolves.")
 
     # If search was triggered, get the embedding and then query Pinecone
     if submit_button and search_query:
